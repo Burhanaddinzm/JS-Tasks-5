@@ -24,16 +24,16 @@ function displayTasks() {
   ulEl.innerHTML = "";
   tasks.forEach((task, index) => {
     const liEl = document.createElement("li");
-    const pEl = document.createElement("p");
+    const spanEl = document.createElement("span");
     const btnRemove = document.createElement("button");
 
-    pEl.textContent = task;
+    spanEl.textContent = task;
     btnRemove.textContent = "Remove";
     btnRemove.addEventListener("click", () => {
       removeTask(index);
     });
 
-    liEl.insertAdjacentElement("afterbegin", pEl);
+    liEl.insertAdjacentElement("afterbegin", spanEl);
     liEl.insertAdjacentElement("beforeend", btnRemove);
     ulEl.insertAdjacentElement("beforeend", liEl);
   });

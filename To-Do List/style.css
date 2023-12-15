@@ -91,7 +91,7 @@ li {
   align-items: center;
 }
 
-li p {
+li span {
   font-size: 20px;
   flex-grow: 1;
 }
