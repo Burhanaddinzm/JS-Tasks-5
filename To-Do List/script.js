@@ -2,6 +2,7 @@
 
 const inputEl = document.querySelector("input");
 const btnAdd = document.getElementById("add");
+const ulEl = document.querySelector("ul");
 
 const tasks = [];
 
@@ -13,4 +14,32 @@ btnAdd.addEventListener("click", (event) => {
   if (!inputValue) {
     return;
   }
+
+  tasks.push(inputValue);
+  displayTasks();
+  inputEl.value = "";
 });
+
+function displayTasks() {
+  ulEl.innerHTML = "";
+  tasks.forEach((task, index) => {
+    const liEl = document.createElement("li");
+    const pEl = document.createElement("p");
+    const btnRemove = document.createElement("button");
+
+    pEl.textContent = task;
+    btnRemove.textContent = "Remove";
+    btnRemove.addEventListener("click", () => {
+      removeTask(index);
+    });
+
+    liEl.insertAdjacentElement("afterbegin", pEl);
+    liEl.insertAdjacentElement("beforeend", btnRemove);
+    ulEl.insertAdjacentElement("beforeend", liEl);
+  });
+}
+
+function removeTask(i) {
+  tasks.splice(i, 1);
+  displayTasks();
+}
