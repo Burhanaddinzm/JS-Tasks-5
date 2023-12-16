@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(184, 217, 209);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insert {
+  display: flex;
+  gap: 50px;
+}
+
+.key {
+  background-color: rgb(64, 170, 138);
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  min-width: 200px;
+  text-align: center;
+  font-size: 32px;
+}
+
+small {
+  position: absolute;
+  top: -30px;
+  left: 40px;
+  color: rgb(64, 170, 138);
+  font-weight: 700;
+  font-size: 24px;
+}
