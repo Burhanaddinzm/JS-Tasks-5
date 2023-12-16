@@ -35,6 +35,12 @@ button:active {
   position: absolute;
 }
 
+.overlay span{
+  position: absolute;
+  top: 570px;
+  left: 920px;
+}
+
 .open-btn {
   padding: 10px 20px;
   background-color: #10b9f7;
