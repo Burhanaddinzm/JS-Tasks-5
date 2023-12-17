@@ -37,8 +37,8 @@ button:active {
 
 .overlay span{
   position: absolute;
-  top: 570px;
-  left: 920px;
+  top: 60%;
+  left: 50%;
 }
 
 .open-btn {
