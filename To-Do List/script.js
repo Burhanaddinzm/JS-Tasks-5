@@ -36,6 +36,7 @@ function displayTasks() {
     liEl.insertAdjacentElement("afterbegin", spanEl);
     liEl.insertAdjacentElement("beforeend", btnRemove);
     ulEl.insertAdjacentElement("beforeend", liEl);
+    console.log("task finish :)");
   });
 }
 
